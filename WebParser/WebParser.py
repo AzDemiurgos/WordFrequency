@@ -1,12 +1,12 @@
 import os
 import requests 
-for seas in range(1, 9):
-    n = 20
+for seas in range(1, 10):
+    n = 21
     if seas == 1 or seas == 2:
-        n = 22
+        n = 23
     else:
         if seas != 3:
-            n = 24
+            n = 25
     for ep in range (1, n):
         epi = ep
         if ep < 10:
