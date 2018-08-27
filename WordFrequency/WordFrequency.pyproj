@@ -5,10 +5,9 @@
     <ProjectGuid>b9c3c52b-9798-4375-8e53-409af95f77c0</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>WordFrequency.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <SearchPath>..\..\C_AMP\onGPU\Release</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.6-32</InterpreterId>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <OutputPath>.</OutputPath>
     <Name>WordFrequency</Name>
@@ -28,7 +27,7 @@
     <None Include="WordFrequency.py" />
   </ItemGroup>
   <ItemGroup>
-    <InterpreterReference Include="Global|PythonCore|3.6" />
+    <InterpreterReference Include="Global|PythonCore|3.6-32" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

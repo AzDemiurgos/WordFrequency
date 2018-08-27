@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WordFrequency", "WordFrequency\WordFrequency.pyproj", "{B9C3C52B-9798-4375-8E53-409AF95F77C0}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythoCAPITest", "PythoCAPITest\PythoCAPITest.pyproj", "{7BB9E174-0A7A-4936-A350-43DD73726D6C}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WebParser", "WebParser\WebParser.pyproj", "{E4671DB0-9E90-4D0B-93F9-C7E8C2DE6DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9C3C52B-9798-4375-8E53-409AF95F77C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C3C52B-9798-4375-8E53-409AF95F77C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB9E174-0A7A-4936-A350-43DD73726D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB9E174-0A7A-4936-A350-43DD73726D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4671DB0-9E90-4D0B-93F9-C7E8C2DE6DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4671DB0-9E90-4D0B-93F9-C7E8C2DE6DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2C37ED7-8771-48B5-AB6B-9ED6B1241288}
+	EndGlobalSection
+EndGlobal

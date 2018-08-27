@@ -1,4 +1,9 @@
 import os
+import sys
+file_dir = os.path.dirname(__file__)
+sys.path.append(file_dir)
+import Accelerate_Py
+import module1
 
 def get_words(filename):
     with open(filename, encoding="utf8") as file:
@@ -35,8 +40,17 @@ def main():
     #text = text.replace(" \'"," ").replace("\' "," ").replace("  "," ")
     #text = text.replace("\t\'", " ").replace("  "," ")
     #text = text.replace("\t'", " ").replace("  "," ")
+    #from Accelerate_Py import Accelerate_Py_Func
+    l_value = [1,2,3,4]
+    l_lambda = [1,2,3,4, 5, 6]
+   # dummy = Accelerate_Py_Func(np.asarray(l_lambda), np.asarray(l_value), 5);
+
+    from module1 import example
+    dummy = example(l_value, l_lambda)
+    dummy = "fsdfds"
 
     filename = input("input path to file: ")
+    dummy = example(l_lambda, l_value)
     while os.path.exists(filename):
         words = get_words(filename)
         words_dict = get_words_dict(words)
