@@ -4,7 +4,7 @@ from lxml import html
 import re
 
 def write_to_file(first_idx, second_idx, value):
-    with open ('test_request_s_{0}_e_{1}.text'.format(first_idx, second_idx), 'w') as output_file:
+    with open ('HIMYM_s_{0}_e_{1}.text'.format(first_idx, second_idx), 'w') as output_file:
             output_file.write(value)
 
 def parse_html(value):  
@@ -47,6 +47,7 @@ def define_episod_count(seas):
     return n
 
 def main():
+    result = ""
     for seas in range(1, 10):
         n = define_episod_count(seas)
         for ep in range (1, n):
@@ -61,6 +62,8 @@ def main():
             #value.strip()
             #value = decoding(value)
             write_to_file(seas, ep, value)
+            result += value
+    write_to_file("","", result)
 
 if __name__ == "__main__":
     main() 
