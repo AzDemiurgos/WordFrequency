@@ -46,6 +46,7 @@ def main():
     #from Accelerate_Py import Accelerate_Py_Func
    
     filename = input("input path to file: ")
+    filename = "E:\Azat\Python\WebParser\GoT\GoT_s__e_.text"
     while os.path.exists(filename):
         words = get_words(filename)
         words_dict = get_words_dict(words)
@@ -55,7 +56,7 @@ def main():
         #words_dict = sorted(words_dict, key=lambda x:x[1], reverse=True)
         print("count of words: %d" % len(words))
         print("Count of unique words: %d" % len(words_dict))
-        with open("frequency.txt", "w") as file:
+        with open("E:\\Azat\\Python\\WebParser\\GoT\\frequency.txt", "w") as file:
             for word in words_dict:
                 file.write(word)
                 file.write("\t")

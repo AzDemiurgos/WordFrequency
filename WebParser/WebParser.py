@@ -4,7 +4,8 @@ from lxml import html
 import re
 
 def write_to_file(first_idx, second_idx, value):
-    with open ('HIMYM_s_{0}_e_{1}.text'.format(first_idx, second_idx), 'w') as output_file:
+    #with open ('HIMYM_s_{0}_e_{1}.text'.format(first_idx, second_idx), 'w') as output_file:
+    with open ('Got\\GoT_s_{0}_e_{1}.text'.format(first_idx, second_idx), 'w') as output_file:
             output_file.write(value)
 
 def parse_html(value):  
@@ -22,7 +23,8 @@ def crawling(seas, ep):
     epi = ep
     if ep < 10:
         epi = "0{0}".format(ep)
-    url = 'https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=how-i-met-your-mother&episode=s0{season}e{episod}'.format(season=seas, episod=epi)
+    #url = 'https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=how-i-met-your-mother&episode=s0{season}e{episod}'.format(season=seas, episod=epi)
+    url = 'https://www.springfieldspringfield.co.uk/view_episode_scripts.php?tv-show=game-of-thrones&episode=s0{season}e{episod}'.format(season=seas, episod=epi)
     r = requests.get(url)
     return r
 
@@ -38,19 +40,27 @@ def decoding(r):
     return value
 
 def define_episod_count(seas):
-    n = 21
-    if seas == 1 or seas == 2:
-        n = 23
-    else:
-        if seas != 3:
-            n = 25
+    #n = 21
+    #if seas == 1 or seas == 2:
+    #    n = 23
+    #else:
+    #    if seas != 3:
+    #        n = 25
+    n = 8
+    if seas < 7:
+        n = 11
     return n
 
 def main():
     result = ""
-    for seas in range(1, 10):
+    for seas in range(1, 8):
         n = define_episod_count(seas)
-        for ep in range (1, n):
+        s = 1
+        if seas == 7:
+            s = 0
+        for ep in range (s, n):
+            if seas == 7 and ep == 1:
+                continue;
             rq = crawling(seas, ep)
             #value = decoding(rq)
             value = rq.text.encode('ascii', 'ignore')
